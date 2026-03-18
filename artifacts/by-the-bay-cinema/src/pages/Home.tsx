@@ -1,4 +1,4 @@
-import { Mail, Phone, User, Check } from "lucide-react";
+import { Mail, Phone, Check, Film, Clock, Music, Palette } from "lucide-react";
 
 const GOOGLE_DRIVE_VIDEO_ID = "1rdkJoSaoNiDM3v8VuPp9fc31mr7owJBi";
 
@@ -7,7 +7,6 @@ const packages = [
     name: "Intro Package",
     price: "$200",
     delivery: "48 Hour Delivery",
-    deliveryNote: "After shoot",
     features: [
       "1 Cinematic basic walkthrough (60–90 sec)",
       "1 Basic reel for social media (10–15 sec)",
@@ -20,7 +19,6 @@ const packages = [
     name: "Basic",
     price: "$350",
     delivery: "36 Hour Delivery",
-    deliveryNote: "After shoot",
     features: [
       "1 Cinematic walkthrough with detail shots (60–90 sec)",
       "2 Cutdowns for social media (10–15 sec)",
@@ -33,7 +31,6 @@ const packages = [
     name: "Standard",
     price: "$525",
     delivery: "24 Hour Delivery",
-    deliveryNote: "After shoot",
     features: [
       "1 Cinematic walkthrough (60–90 sec)",
       "3 Cutdowns for social media (10–15 sec)",
@@ -47,7 +44,6 @@ const packages = [
     name: "Pro-Pack",
     price: "$700",
     delivery: "12–18 Hour Delivery",
-    deliveryNote: "After shoot",
     features: [
       "1 Cinematic walkthrough – different styles (60–90 sec)",
       "5 Cutdowns for social media (10–15 sec)",
@@ -68,20 +64,31 @@ const addOns = [
   { name: "Brand reel revision", price: "$10" },
 ];
 
+const pillars = [
+  { icon: Film, label: "Cinematic Quality" },
+  { icon: Clock, label: "Fast Turnaround" },
+  { icon: Music, label: "Licensed Music" },
+  { icon: Palette, label: "Color Graded" },
+];
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-background/80 backdrop-blur border-b border-border">
-        <span className="text-lg font-semibold tracking-wide text-primary">By the Bay Cinema</span>
-        <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#video" className="hover:text-foreground transition-colors">Work</a>
-          <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
-          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-background/70 backdrop-blur-md border-b border-white/5">
+        <div className="flex items-center gap-2">
+          <div className="w-1 h-5 bg-primary rounded-full" />
+          <span className="text-base font-bold tracking-widest uppercase text-foreground">By the Bay Cinema</span>
+        </div>
+        <div className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest uppercase text-muted-foreground">
+          <a href="#video" className="hover:text-primary transition-colors">Work</a>
+          <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
+          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
         <a
           href="#contact"
-          className="text-sm px-4 py-2 rounded-md bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+          className="text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-none bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
         >
           Book Now
         </a>
@@ -89,103 +96,148 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-20 pb-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(234,179,8,0.07)_0%,_transparent_70%)] pointer-events-none" />
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-4">Real Estate Videography</p>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            By the Bay<br />
-            <span className="text-primary">Cinema</span>
+        {/* Layered background glows */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,_rgba(234,179,8,0.06)_0%,_transparent_70%)] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+
+        {/* Decorative lines */}
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-2 items-center opacity-20">
+          <div className="w-px h-24 bg-primary" />
+          <div className="w-1 h-1 rounded-full bg-primary" />
+          <div className="w-px h-24 bg-primary" />
+        </div>
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-2 items-center opacity-20">
+          <div className="w-px h-24 bg-primary" />
+          <div className="w-1 h-1 rounded-full bg-primary" />
+          <div className="w-px h-24 bg-primary" />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="h-px w-12 bg-primary/60" />
+            <p className="text-primary text-xs font-bold tracking-[0.35em] uppercase">Real Estate Videography</p>
+            <div className="h-px w-12 bg-primary/60" />
+          </div>
+
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-2 leading-none">
+            By the Bay
           </h1>
-          
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none"
+            style={{ WebkitTextStroke: "1px hsl(38 90% 55%)", color: "transparent" }}>
+            Cinema
+          </h1>
+
+          {/* Pillars */}
+          <div className="flex flex-wrap justify-center gap-6 mt-12 mb-12">
+            {pillars.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2 text-xs tracking-widest uppercase text-muted-foreground">
+                <Icon className="w-3.5 h-3.5 text-primary" />
+                {label}
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#video"
-              className="px-8 py-3 rounded-md bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+              className="px-10 py-3.5 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-opacity"
             >
               Watch Our Work
             </a>
             <a
               href="#pricing"
-              className="px-8 py-3 rounded-md border border-border text-foreground font-semibold hover:bg-secondary transition-colors"
+              className="px-10 py-3.5 border border-white/15 text-foreground text-xs font-bold tracking-widest uppercase hover:border-primary/50 hover:bg-white/5 transition-colors"
             >
               View Pricing
             </a>
           </div>
         </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-          <div className="w-0.5 h-8 bg-primary mx-auto rounded-full" />
+
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-30 animate-bounce">
+          <div className="w-px h-10 bg-primary" />
         </div>
       </section>
 
       {/* VIDEO SECTION */}
       <section id="video" className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          
-          <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-card">
-            <div className="aspect-video w-full">
-              <iframe
-                src={`https://drive.google.com/file/d/${GOOGLE_DRIVE_VIDEO_ID}/preview`}
-                className="w-full h-full"
-                allow="autoplay"
-                allowFullScreen
-                title="By the Bay Cinema – Featured Real Estate Video"
-              />
+          <div className="relative">
+            {/* Corner accents */}
+            <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-primary z-10" />
+            <div className="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-primary z-10" />
+            <div className="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-primary z-10" />
+            <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-primary z-10" />
+            <div className="overflow-hidden border border-white/10 shadow-2xl shadow-black/60 bg-card">
+              <div className="aspect-video w-full">
+                <iframe
+                  src={`https://drive.google.com/file/d/${GOOGLE_DRIVE_VIDEO_ID}/preview`}
+                  className="w-full h-full"
+                  allow="autoplay"
+                  allowFullScreen
+                  title="By the Bay Cinema – Featured Real Estate Video"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* THIN DIVIDER */}
+      <div className="flex items-center justify-center gap-4 py-4 px-6 opacity-30">
+        <div className="h-px flex-1 max-w-xs bg-gradient-to-r from-transparent to-primary/60" />
+        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+        <div className="h-px flex-1 max-w-xs bg-gradient-to-l from-transparent to-primary/60" />
+      </div>
+
       {/* PRICING */}
-      <section id="pricing" className="py-24 px-6 bg-card/40">
+      <section id="pricing" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Transparent Pricing</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Package</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">Every package includes licensed music and professional editing. Faster delivery available with Pro-Pack.</p>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-px w-10 bg-primary/60" />
+              <p className="text-primary text-xs font-bold tracking-[0.35em] uppercase">Packages</p>
+              <div className="h-px w-10 bg-primary/60" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Choose Your Package</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border mb-16 border border-border">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className={`relative rounded-xl border p-6 flex flex-col gap-4 ${
+                className={`relative p-6 flex flex-col gap-4 ${
                   pkg.highlight
-                    ? "border-primary bg-card shadow-lg shadow-primary/10"
-                    : "border-border bg-card"
+                    ? "bg-primary/5 border-t-2 border-t-primary"
+                    : "bg-card"
                 }`}
               >
                 {pkg.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full uppercase tracking-wide">
-                    Most Popular
+                  <div className="absolute top-0 right-0 px-2 py-0.5 bg-primary text-primary-foreground text-[10px] font-black uppercase tracking-widest">
+                    Popular
                   </div>
                 )}
                 <div>
-                  <h3 className="text-lg font-bold mb-1">{pkg.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-1">
-                    <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                  </div>
-                  <p className="text-xs text-primary font-semibold">
-                    {pkg.delivery} <span className="text-muted-foreground font-normal">({pkg.deliveryNote})</span>
-                  </p>
+                  <h3 className="text-xs font-black tracking-widest uppercase text-muted-foreground mb-3">{pkg.name}</h3>
+                  <div className="text-4xl font-black text-foreground mb-1">{pkg.price}</div>
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-primary">{pkg.delivery}</p>
                 </div>
-                <ul className="flex flex-col gap-2 flex-1">
+                <ul className="flex flex-col gap-2.5 flex-1">
                   {pkg.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
+                      <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
                       {f}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="#contact"
-                  className={`mt-2 w-full py-2.5 rounded-md text-sm font-semibold text-center transition-opacity hover:opacity-90 ${
+                  className={`mt-2 w-full py-2.5 text-xs font-black tracking-widest uppercase text-center transition-opacity hover:opacity-80 ${
                     pkg.highlight
                       ? "bg-primary text-primary-foreground"
-                      : "border border-border text-foreground hover:bg-secondary"
+                      : "border border-border text-foreground hover:border-primary/50"
                   }`}
                 >
-                  Book This Package
+                  Book
                 </a>
               </div>
             ))}
@@ -193,15 +245,19 @@ export default function Home() {
 
           {/* Add-ons */}
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-center mb-6 text-primary uppercase tracking-widest text-sm">Add-Ons</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px flex-1 bg-border" />
+              <p className="text-xs font-black tracking-[0.35em] uppercase text-primary">Add-Ons</p>
+              <div className="h-px flex-1 bg-border" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border border border-border">
               {addOns.map((addon) => (
                 <div
                   key={addon.name}
-                  className="flex items-center justify-between px-4 py-3 rounded-lg border border-border bg-card"
+                  className="flex items-center justify-between px-5 py-3.5 bg-card"
                 >
-                  <span className="text-sm text-foreground">{addon.name}</span>
-                  <span className="text-sm font-semibold text-primary ml-4 shrink-0">{addon.price}</span>
+                  <span className="text-xs text-muted-foreground">{addon.name}</span>
+                  <span className="text-sm font-black text-primary ml-4 shrink-0">{addon.price}</span>
                 </div>
               ))}
             </div>
@@ -209,55 +265,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THIN DIVIDER */}
+      <div className="flex items-center justify-center gap-4 py-4 px-6 opacity-30">
+        <div className="h-px flex-1 max-w-xs bg-gradient-to-r from-transparent to-primary/60" />
+        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+        <div className="h-px flex-1 max-w-xs bg-gradient-to-l from-transparent to-primary/60" />
+      </div>
+
       {/* CONTACT */}
       <section id="contact" className="py-24 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Get in Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Book?</h2>
-          <p className="text-muted-foreground mb-12 text-lg">
-            Reach out to schedule your shoot. Fast turnaround guaranteed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-10 bg-primary/60" />
+            <p className="text-primary text-xs font-bold tracking-[0.35em] uppercase">Contact</p>
+            <div className="h-px w-10 bg-primary/60" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">
+            Aiden Flores
+          </h2>
+
+          <div className="flex flex-col gap-px bg-border border border-border overflow-hidden">
             <a
               href="tel:+1"
-              className="flex items-center gap-3 px-6 py-4 rounded-xl border border-border bg-card hover:border-primary transition-colors group"
+              className="flex items-center gap-4 px-6 py-5 bg-card hover:bg-primary/5 transition-colors group"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Phone className="w-5 h-5 text-primary" />
+              <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <Phone className="w-4 h-4 text-primary" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-muted-foreground mb-0.5">Call or Text</p>
-                <p className="font-semibold text-foreground">Your Number Here</p>
+                <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-0.5">Call or Text</p>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">Your Number Here</p>
               </div>
+              <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
             </a>
             <a
               href="mailto:youremail@email.com"
-              className="flex items-center gap-3 px-6 py-4 rounded-xl border border-border bg-card hover:border-primary transition-colors group"
+              className="flex items-center gap-4 px-6 py-5 bg-card hover:bg-primary/5 transition-colors group"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Mail className="w-5 h-5 text-primary" />
+              <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <Mail className="w-4 h-4 text-primary" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-muted-foreground mb-0.5">Email</p>
-                <p className="font-semibold text-foreground">youremail@email.com</p>
+                <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-0.5">Email</p>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">youremail@email.com</p>
               </div>
+              <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
             </a>
-          </div>
-          <div className="mt-8 flex items-center gap-3 px-6 py-4 rounded-xl border border-border bg-card justify-center mx-auto max-w-xs">
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-              <User className="w-5 h-5 text-primary" />
-            </div>
-            <div className="text-left">
-              <p className="text-xs text-muted-foreground mb-0.5">Name</p>
-              <p className="font-semibold text-foreground">Your Name Here</p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border py-8 px-6 text-center text-muted-foreground text-sm">
-        <p>© {new Date().getFullYear()} By the Bay Cinema. All rights reserved.</p>
+      <footer className="border-t border-white/5 py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <div className="w-1 h-4 bg-primary rounded-full" />
+          <span className="text-xs font-black tracking-widest uppercase text-muted-foreground">By the Bay Cinema</span>
+        </div>
+        <p className="text-xs text-muted-foreground/50">© {new Date().getFullYear()} Aiden Flores. All rights reserved.</p>
       </footer>
     </div>
   );
