@@ -97,9 +97,7 @@ export default function Home() {
             By the Bay<br />
             <span className="text-primary">Cinema</span>
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Cinematic real estate videos that make properties shine. Fast turnaround, stunning visuals, licensed music.
-          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#video"
@@ -123,10 +121,7 @@ export default function Home() {
       {/* VIDEO SECTION */}
       <section id="video" className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Featured Work</p>
-            <h2 className="text-3xl md:text-4xl font-bold">See It in Action</h2>
-          </div>
+          
           <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-card">
             <div className="aspect-video w-full">
               <iframe
