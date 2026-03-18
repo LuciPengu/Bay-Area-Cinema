@@ -1,4 +1,4 @@
-import { Mail, Phone, Check, Film, Clock, Music, Palette } from "lucide-react";
+import { Mail, Phone, Check } from "lucide-react";
 
 const GOOGLE_DRIVE_VIDEO_ID = "1rdkJoSaoNiDM3v8VuPp9fc31mr7owJBi";
 
@@ -64,12 +64,6 @@ const addOns = [
   { name: "Brand reel revision", price: "$10" },
 ];
 
-const pillars = [
-  { icon: Film, label: "Cinematic Quality" },
-  { icon: Clock, label: "Fast Turnaround" },
-  { icon: Music, label: "Licensed Music" },
-  { icon: Palette, label: "Color Graded" },
-];
 
 export default function Home() {
   return (
@@ -122,22 +116,19 @@ export default function Home() {
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-2 leading-none">
             By the Bay
           </h1>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none"
-            style={{ WebkitTextStroke: "1px hsl(38 90% 55%)", color: "transparent" }}>
+          <h1
+            className="text-6xl md:text-8xl tracking-tight leading-none italic"
+            style={{
+              fontFamily: "'Times New Roman', Times, serif",
+              WebkitTextStroke: "1.5px hsl(38, 90%, 55%)",
+              color: "transparent",
+              letterSpacing: "0.02em",
+            }}
+          >
             Cinema
           </h1>
 
-          {/* Pillars */}
-          <div className="flex flex-wrap justify-center gap-6 mt-12 mb-12">
-            {pillars.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-xs tracking-widest uppercase text-muted-foreground">
-                <Icon className="w-3.5 h-3.5 text-primary" />
-                {label}
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <a
               href="#video"
               className="px-10 py-3.5 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-opacity"
