@@ -144,9 +144,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-30 animate-bounce">
-          <div className="w-px h-10 bg-primary" />
-        </div>
       </section>
 
       {/* VIDEO SECTION */}
