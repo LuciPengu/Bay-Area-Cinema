@@ -274,7 +274,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-px bg-border border border-border overflow-hidden">
             <a
-              href="tel:+1"
+              href="tel:+12098346875"
               className="flex items-center gap-4 px-6 py-5 bg-card hover:bg-primary/5 transition-colors group"
             >
               <div className="w-8 h-8 flex items-center justify-center shrink-0">
@@ -282,12 +282,12 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-0.5">Call or Text</p>
-                <p className="font-bold text-foreground group-hover:text-primary transition-colors">Your Number Here</p>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">209-834-6875</p>
               </div>
               <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
             </a>
             <a
-              href="mailto:youremail@email.com"
+              href="mailto:a1d3nflowers19@gmail.com"
               className="flex items-center gap-4 px-6 py-5 bg-card hover:bg-primary/5 transition-colors group"
             >
               <div className="w-8 h-8 flex items-center justify-center shrink-0">
@@ -295,7 +295,7 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-0.5">Email</p>
-                <p className="font-bold text-foreground group-hover:text-primary transition-colors">youremail@email.com</p>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">a1d3nflowers19@gmail.com</p>
               </div>
               <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
             </a>
