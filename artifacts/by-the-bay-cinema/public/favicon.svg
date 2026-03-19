@@ -1,3 +1,33 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="6" fill="#0f0f12"/>
+
+  <!-- Film frame corners - top left -->
+  <rect x="3" y="3" width="5" height="2" fill="#f5a623"/>
+  <rect x="3" y="3" width="2" height="5" fill="#f5a623"/>
+
+  <!-- Film frame corners - top right -->
+  <rect x="24" y="3" width="5" height="2" fill="#f5a623"/>
+  <rect x="27" y="3" width="2" height="5" fill="#f5a623"/>
+
+  <!-- Film frame corners - bottom left -->
+  <rect x="3" y="27" width="5" height="2" fill="#f5a623"/>
+  <rect x="3" y="24" width="2" height="5" fill="#f5a623"/>
+
+  <!-- Film frame corners - bottom right -->
+  <rect x="24" y="27" width="5" height="2" fill="#f5a623"/>
+  <rect x="27" y="24" width="2" height="5" fill="#f5a623"/>
+
+  <!-- Italic serif "B" -->
+  <text
+    x="16"
+    y="22"
+    text-anchor="middle"
+    font-family="'Times New Roman', Times, serif"
+    font-style="italic"
+    font-size="17"
+    fill="none"
+    stroke="#f5a623"
+    stroke-width="0.8"
+  >B</text>
 </svg>
