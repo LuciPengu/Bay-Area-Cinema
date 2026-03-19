@@ -302,6 +302,40 @@ export default function Home() {
               </div>
               <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
             </a>
+            <a
+              href="https://www.tiktok.com/@filmdelinquent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 px-6 py-5 bg-card hover:bg-primary/5 transition-colors group"
+            >
+              <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.73a4.85 4.85 0 0 1-1.01-.04z"/>
+                </svg>
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-0.5">TikTok</p>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">@filmdelinquent</p>
+              </div>
+              <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
+            </a>
+            <a
+              href="https://youtube.com/@filmdelinquent-energy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 px-6 py-5 bg-card hover:bg-primary/5 transition-colors group"
+            >
+              <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.6 12 3.6 12 3.6s-7.54 0-9.38.45A3.02 3.02 0 0 0 .5 6.19 31.8 31.8 0 0 0 .06 12a31.8 31.8 0 0 0 .44 5.81 3.02 3.02 0 0 0 2.12 2.14C4.46 20.4 12 20.4 12 20.4s7.54 0 9.38-.45a3.02 3.02 0 0 0 2.12-2.14A31.8 31.8 0 0 0 23.94 12a31.8 31.8 0 0 0-.44-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/>
+                </svg>
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-0.5">YouTube</p>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">Film Delinquents</p>
+              </div>
+              <div className="ml-auto h-px flex-1 max-w-12 bg-border group-hover:bg-primary/40 transition-colors" />
+            </a>
           </div>
         </div>
       </section>
